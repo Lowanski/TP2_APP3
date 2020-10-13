@@ -16,13 +16,17 @@ public class Liste {
     }
 
     public void Dernier(){
-        selecteur = myList.size()-1;
+        selecteur = myList.size();
     }
 
-    public void Suivant(){
+    public Object Suivant(){
         if(selecteur < myList.size()){
             selecteur++;
         }
+        else {
+            System.out.println("Erreur sortie");
+        }
+        return myList.get(selecteur);
     }
 
     public Object Supprimer(){
